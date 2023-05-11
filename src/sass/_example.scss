@@ -1,0 +1,120 @@
+.example {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+  max-width: 960px;
+  padding: 16px;
+}
+
+.example code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff6b0a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.example .background {
+  height: 240px;
+  // ❗️❗️❗️ The path to images from a SASS file
+  // is always the same as from the css folder.
+  background-image: url('../images/logo.png');
+  background-size: cover;
+  background-position: center;
+}
+
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+}
+
+ul {
+  list-style: none;
+}
+
+.gallery {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 240px;
+  grid-gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery__item {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__image:hover {
+  transform: scale(1.03);
+}
+
+.gallery__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+
+.gallery__link {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.gallery__link:hover {
+  cursor: zoom-in;
+}
+
+.form-control {
+  align-content: center;
+  align-items: center;
+  position: static;
+}
+
+.gallery__item p {
+  position: absolute;
+  left: 3%;
+  bottom: -3%;
+  color: white;
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  align-items: center;
+}
+
+body {
+  position: relative;
+}
